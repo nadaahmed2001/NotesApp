@@ -20,5 +20,3 @@ app.listen(5001, () => {
 });
 
 
-//// drU8lnn4v6qVmAl1
-//mongodb+srv://nadafcai_db_user:drU8lnn4v6qVmAl1@cluster0.4tsidxu.mongodb.net/?appName=Cluster0
