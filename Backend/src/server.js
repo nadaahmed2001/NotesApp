@@ -7,16 +7,21 @@ import dotenv from "dotenv";
 
 
 dotenv.config();
-console.log(process.env.MONGO_URI);
+const PORT = process.env.PORT || 5001;
+// console.log(process.env.MONGO_URI);
 const app = express();
-connectDB();
-
+app.use(express.json());
 app.use("/api/notes", notesRoutes);
 
 
-
-app.listen(5001, () => {
-    console.log("App started at port 5001");
+connectDB().then(() => {
+    app.listen(PORT, () => {
+        console.log("Server started on PORT:", PORT);
+    });
 });
+
+
+
+
 
 
