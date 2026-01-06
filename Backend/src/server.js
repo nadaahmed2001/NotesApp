@@ -18,10 +18,14 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);//returns the backend directory
 
 //middleware
-if (process.env.NODE_ENV !== "production") {
-    // Allow all origins in development
-    app.use(cors({ origin: "*", }));
-}
+app.use(cors({
+    origin: [
+        "http://localhost:5173",
+        "https://notes-app-ecru-six.vercel.app",
+        "https://notesapp-0asj.onrender.com"
+    ],
+    credentials: true
+}));
 app.use(express.json());
 app.use(ratelimiter)
 app.use("/api/notes", notesRoutes);
