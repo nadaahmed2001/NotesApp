@@ -29,11 +29,11 @@ app.use("/api/notes", notesRoutes);//this will handle all the routes starting wi
 
 if (process.env.NODE_ENV === "production") {
     //serve static files
-    app.use(express.static(path.join(__dirname, "../frontend/dist")));
+    app.use(express.static(path.join(__dirname, "../Frontend/dist")));
 
     app.get("*", (req, res) => {
         //serve the index.html file
-        res.sendFile(path.join(__dirname, "../frontend", "dist", "index.html"));
+        res.sendFile(path.join(__dirname, "../Frontend", "dist", "index.html"));
     });
 }
 
