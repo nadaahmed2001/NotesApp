@@ -45,7 +45,7 @@ A full-stack notes management application built with the **MERN stack** (MongoDB
 
 ### 1. Clone the repository
 ```bash
-git clone <your-repository-url>
+git clone https://github.com/nadaahmed2001/NotesApp
 cd MERN-Crash-Course
 ```
 
